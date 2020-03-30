@@ -1,48 +1,10 @@
-# Download Manager
-
-## Download Manager Download image, video, pdf in device.
-
-
-Added Some screens here.
-
-![](https://github.com/pawankv89/DownloadManager/blob/master/images/screen_1.png)
-![](https://github.com/pawankv89/DownloadManager/blob/master/images/screen_2.png)
-![](https://github.com/pawankv89/DownloadManager/blob/master/images/screen_3.png)
-![](https://github.com/pawankv89/DownloadManager/blob/master/images/screen_4.png)
-
-
-## Usage
-
-#### Controller
-
-```swift
-
-@IBAction func imageDowloadButtonTap(_ sender: UIButton) {
-    
-    let url = "https://www.tutorialspoint.com/images/QAicon.png"
-    DownloadManagerRequest.shared.imageWithRequest(url: url, imageView: imageImageView, placeholder: "placeholder")
-    
-}
-@IBAction func videoDowloadButtonTap(_ sender: UIButton) {
-       
-       let url = "http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"
-       DownloadManagerRequest.shared.videoWithRequest(url: url, completionHandler: {(url) -> Void in
-        
-        print("videoDowloadButtonTap ", url)
-       })
-}
-@IBAction func pdfDowloadButtonTap(_ sender: UIButton) {
-       
-       let url = "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-        DownloadManagerRequest.shared.pdfWithRequest(url: url, completionHandler: {(url) -> Void in print("pdfDowloadButtonTap ", url)
-        })
-}
-
-```
-
-#### DownloadManagerRequest
-
-```swift
+//
+//  DownloadManagerRequest.swift
+//  DownloadManager
+//
+//  Created by Pawan kumar on 30/03/20.
+//  Copyright © 2020 Pawan Kumar. All rights reserved.
+//
 
 import Foundation
 import UIKit
@@ -370,22 +332,3 @@ class DownloadManagerRequest {
  */
  
 }
-
-
-```
-
-## Requirements
-
-### Build
-
-Xcode Version 11.3 (11C29), iOS 13.2.0 SDK
-
-## License
-
-This code is distributed under the terms and conditions of the [MIT license](LICENSE).
-
-## Change-log
-
-A brief summary of each this release can be found in the [CHANGELOG](CHANGELOG.mdown). 
-
-
